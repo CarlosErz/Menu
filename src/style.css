@@ -1,0 +1,28 @@
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+.title{
+  text-align: center;
+}
+@media screen and (max-width: 350px) {
+  .Card{
+    width:120px
+  }
+  .product-container{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+}
+@media screen and (min-width: 700px){
+  .product-container{
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+}
+  

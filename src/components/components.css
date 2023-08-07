@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #E6E6E6;
+
+}
+.title{
+  text-align: center;
+}
+
+.Card {
+  width: 141px;
+  height: 290px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+
+.Card:hover {
+
+  scale: 1.01;
+}
+
+.Card_Content {
+  width: 100%;
+  height: 50%;
+
+
+}
+
+.Card_Content img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.Card p,
+.Card h1 {
+  margin: 12px 0 12px 0;
+}
+
+.Card_title {
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  height: 20%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+
+}
+
+.Card_description {
+  font-size: 16px;
+  color: #CBCBCB;
+}
+
+.Card_price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navegation {
+  height: 70px;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.51,-0.25, 0.5, 1.3);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.navegation__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease;
+  border-radius: 13px;
+  background: #DDD;
+  margin: 3%;
+  box-shadow: 4px 1px 7px 0px rgba(18, 1, 1, 0.10);
+}
+
+.navegation__link:hover{
+  background: #000000;
+  color: #FFF;
+  box-shadow: 4px 1px 7px 0px rgba(18, 1, 1, 0.10);
+}
+.navegation__link.active {
+  background: #000000;
+  color: #FFF;
+  box-shadow: 4px 1px 7px 0px rgba(18, 1, 1, 0.10);
+
+ }
+ .menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  border-radius: 50%;
+  
+}
+.line {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+ 
+@media screen and (max-width: 450px) {
+  .Card {
+    width: 120px
+  }
+  .navegation{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  }
+
+}
+@media screen and (max-width: 350px) {
+  .Card{
+    width:120px
+  }
+  .product-container{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .navegation{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    gap: 20px;
+  }
+}
