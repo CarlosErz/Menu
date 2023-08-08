@@ -9,15 +9,17 @@ export function Card({ TitleCard, DescriptionCard, PriceCard, ImgCard,onClick })
 
 
           <header className="Card_Content">
-            <img src={ImgCard} alt="Descripción de la imagen" className="Card_img" />
-
-          </header>
+            <div className="Card_img_content">
+               <img src={ImgCard} alt={TitleCard} className="Card_img" />
+            </div>
+          
           <h1 className="Card_title">{TitleCard}</h1>
           <p className="Card_description">{DescriptionCard}</p>
           <p className="Card_price">
             {PriceCard}
           </p>
-      </section>
+          </header>
+      </section> 
     </>
   )
 }
