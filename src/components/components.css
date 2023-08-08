@@ -77,6 +77,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
   background-color: #000;
   color: #FFF;
   border: none;
@@ -90,7 +91,7 @@ body {
 }
 .Card {
   width: 141px;
-  height: 290px;
+  height: 320px;
   padding: 10px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
@@ -165,6 +166,31 @@ body {
   margin: 0;
   list-style: none;
   flex-direction: row;
+}
+.Card_flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.Card_agg{
+  width:30px;
+  height: 30px;
+  display: flex;
+  background: #000;
+  border-radius: 30px;
+  color: #FFF;
+  font-size: 20px;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.Card_agg:hover{
+  background: #FFF;
+  color: #000;
+  border: 1px solid #000;
 }
 .navegation {
   height: 70px;
@@ -264,7 +290,8 @@ body {
  
 @media screen and (max-width: 450px) {
   .Card {
-    width: 120px
+    width: 120px;
+    height: 350px;
   }
   .navegation{
     display: flex;
@@ -284,12 +311,17 @@ body {
     height: 40px;
     border-radius: 20px;
   }
+  .product-container{
+
+    gap: 0;
+  }
 
 }
 @media screen and (max-width: 350px) {
-  .Card{
-    width:120px
-  }
+  .Card {
+    width: 140px;
+    height: 300px;
+}
   .product-container{
     grid-template-columns: 1fr;
     gap: 0;
