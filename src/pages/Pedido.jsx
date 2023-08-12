@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import plato from '../assets/plato404.svg';
+import plato from '../assets/Plato404.svg'
 
 export function Pedido({ allProducts, setAllProducts, total, setTotal }) {
 
