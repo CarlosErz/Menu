@@ -318,6 +318,8 @@ body {
   background-color: #FFF;
   margin-top: 20px;
   align-items: center;
+  height: 150px;
+  margin-bottom: 30px;
   justify-content: center;
 
 }
