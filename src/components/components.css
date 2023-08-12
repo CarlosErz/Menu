@@ -156,6 +156,7 @@ body {
   width: 100%;
   height: 50%;
   overflow: hidden;
+  text-align: left;
   text-overflow: ellipsis;
   text-transform: uppercase;
 
@@ -256,6 +257,7 @@ body {
 .navegation__link.active {
   background: #000000;
   color: #FFF;
+
   box-shadow: 4px 1px 7px 0px rgba(18, 1, 1, 0.10);
 
  }
@@ -315,6 +317,8 @@ body {
   flex-direction: row;
   background-color: #FFF;
   margin-top: 20px;
+  align-items: center;
+  justify-content: center;
 
 }
 .order_img{
@@ -327,6 +331,8 @@ body {
 }
 .order_header{
   margin-left: 30px;
+  width: 120px;
+  height: 80px;
 }
 .order_btn{
  display: flex;
@@ -350,6 +356,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 
 .order_agg:hover,
@@ -357,6 +364,18 @@ body {
   background: #FFF;
   color: #000;
   border: 1px solid #000;
+}
+.order_delete{
+  border: none;
+  background: #9e0000;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .order_remove{
@@ -372,20 +391,91 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 .order_empty{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
+  text-align: center;
   text-transform: uppercase;
-  width: 100%;
   font-size: 20px;
   color: #b2b2b2;
   font-weight: bold;
 }
- 
+.order_empty_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  height: 80vh;
+  color: #b2b2b2;
+  font-weight: bold;
+  margin: 20px;
+}
+.order_empty_title{
+  font-size: 30px;
+  color: #cecece;
+  font-weight: bold;
+}
+.order_color{
+  filter: grayscale(100%);
+  
+}
+.order_total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #000000;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.modal_add_order{
+  width: 100%;
+  color: #FFF;
+  top: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color:#000000;
+  align-items: center;
+  font-weight: 600;
+  z-index: 10000;
+  animation: slideIn 1s ease-in-out alternate;
+}
+.modal_add_order__container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+}
+.Hiden{
+ visibility: hidden;
+ animation: out 1s ease-in-out ;
+}
+@keyframes out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 450px) {
   .Card {
     width: 120px;
@@ -423,7 +513,7 @@ body {
 @media screen and (max-width: 350px) {
   .Card {
     width: 140px;
-    height: 300px;
+    height: 340px;
 }
   .product-container{
     grid-template-columns: 1fr;
@@ -440,4 +530,43 @@ body {
     width: 35px;
     font-size: 16px;
   }
+  .order_products{
+    justify-content: center;
+    align-items: center;
+  }
+  .order_btn{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .order_header{
+    justify-content: center;
+    display: flex;
+    width: 120px;
+    height: 80px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .order_img{
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 700px){
+  .order_header{
+    margin: 4px;
+  }
+  .order_btn{
+    gap: 10px;
+    margin: 2px;
+  }
+  .order_delete{
+    padding: 5px;
+    font-size: 14px;
+
+  }
+  .order_products{
+    padding: 5px;
+  }
+  
 }

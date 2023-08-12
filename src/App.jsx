@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import { useState} from "react";
 import { Productos } from "./pages/Productos";
 import { Pedido } from "./pages/Pedido";
 import { Pague404 } from "./pages/Pague404";
@@ -7,11 +6,15 @@ import { Pague404 } from "./pages/Pague404";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [allProducts, setAllProducts] = useState([]);
-  const [total, setTotal] = useState(0);
+  const [allProducts, setAllProducts] = useState(
+    JSON.parse(localStorage.getItem('cartProducts')) || []
+  );
+  const [total, setTotal] = useState(
+    parseFloat(localStorage.getItem('cartTotal')) || 0
+  );
   const {countproducts, setCountproducts} = useState(0);
-
   
+
   return (
  
       <BrowserRouter>

@@ -22,7 +22,7 @@ export function Navbar({ setSelectedItem }) {
 
 
       <nav className="navegation">
-        {isMenuOpened && (
+        {isMenuOpened &&  (
           <>
 
             <a
@@ -48,7 +48,7 @@ export function Navbar({ setSelectedItem }) {
             </a>
          
             <Link className='navegation__link' to='/Pedido'>
-            Pedido
+            orden
             </Link>
           </>
         )}

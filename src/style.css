@@ -16,6 +16,12 @@
     grid-template-columns: 1fr;
     gap: 0;
   }
+  .order_header{
+    margin: 4px;
+  }
+  .order_btn{
+    gap: 10px;
+  }
 
 }
 @media screen and (min-width: 700px){
@@ -25,4 +31,5 @@
   }
   
 }
+
   

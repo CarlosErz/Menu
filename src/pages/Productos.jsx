@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Card } from '../components/Card';
 import { CardContent } from '../data/CardContent';
@@ -9,10 +9,26 @@ import PropTypes from 'prop-types';
 export function Productos({ allProducts, setAllProducts, total, setTotal }) {
   const [selectedItem, setSelectedItem] = useState("Hotdogs");
   const [selectedCard, setSelectedCard] = useState(null);
-
-
+  const [addedProduct, setAddProduct] = useState(null);
+  const [active, setActive] = useState(false);
 
   const filteredCards = CardContent.filter(card => card.Section === selectedItem);
+
+  const testLocalStorage = () => {
+    const storedProducts = JSON.parse(localStorage.getItem('cartProducts') || '[]');
+    console.log("Productos en el localStorage:", storedProducts);
+  };
+
+  useEffect(() => {
+    const storedProducts = JSON.parse(localStorage.getItem('cartProducts') || '[]');
+    setAllProducts(storedProducts);
+  }, [setAllProducts]);
+
+ 
+  useEffect(() => {
+    localStorage.setItem('cartProducts', JSON.stringify(allProducts));
+  }, [allProducts]);
+
 
   const handleCardClick = (index) => {
     setSelectedCard(filteredCards[index]);
@@ -24,6 +40,11 @@ export function Productos({ allProducts, setAllProducts, total, setTotal }) {
 
 
   const addToCart = (card) => {
+    setActive(true);
+    setTimeout(() => {
+      setActive(false);
+    }, 600);
+  
     const existingProduct = allProducts.find(product => product.idcard === card.idcard);
   
     if (existingProduct) {
@@ -33,21 +54,31 @@ export function Productos({ allProducts, setAllProducts, total, setTotal }) {
       setAllProducts(updatedProducts);
     } else {
       const newProduct = { ...card, quantity: 1 };
-      setAllProducts([...allProducts, newProduct]);
+      setAllProducts(prevProducts => [...prevProducts, newProduct]);
     }
-    setTotal(total + card.PriceCard * card.quantity);
-    
+    const updatedTotal = total + card.PriceCard * card.quantity;
+    setTotal(updatedTotal);
+    localStorage.setItem('cartTotal', updatedTotal.toString());
+    setAddProduct(card);
+    console.log(card);
+    testLocalStorage();
   };
   
-
- console.log(allProducts)
-
-
 
   return (
     <>
       <h1 className="title">MENÚ</h1>
       <Navbar setSelectedItem={setSelectedItem} />
+      <div className={`modal_add_order ${active ? ' ' : 'Hiden'}  `}>
+        <div className="modal_add_order__container">
+          {addedProduct && (
+            <>
+              <p>Agregaste  {addedProduct.TitleCard}</p>
+              <p>+ {addedProduct.quantity}</p>
+            </>
+          )}
+        </div>
+      </div>
       <div className="product-container">
         {filteredCards.map((card, index) => (
           <Card
