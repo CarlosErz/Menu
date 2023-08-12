@@ -48,7 +48,7 @@ export function Navbar({ setSelectedItem }) {
             </a>
          
             <Link className='navegation__link' to='/Pedido'>
-            orden
+            Orden
             </Link>
           </>
         )}
