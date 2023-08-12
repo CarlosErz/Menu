@@ -14,10 +14,10 @@ export function Productos({ allProducts, setAllProducts, total, setTotal }) {
 
   const filteredCards = CardContent.filter(card => card.Section === selectedItem);
 
-  const testLocalStorage = () => {
-    const storedProducts = JSON.parse(localStorage.getItem('cartProducts') || '[]');
-    console.log("Productos en el localStorage:", storedProducts);
-  };
+  {//const testLocalStorage = () => {
+   // const storedProducts = JSON.parse(localStorage.getItem('cartProducts') || '[]');
+   // console.log("Productos en el localStorage:", storedProducts);
+  }//;}
 
   useEffect(() => {
     const storedProducts = JSON.parse(localStorage.getItem('cartProducts') || '[]');
@@ -60,8 +60,6 @@ export function Productos({ allProducts, setAllProducts, total, setTotal }) {
     setTotal(updatedTotal);
     localStorage.setItem('cartTotal', updatedTotal.toString());
     setAddProduct(card);
-    console.log(card);
-    testLocalStorage();
   };
   
 
