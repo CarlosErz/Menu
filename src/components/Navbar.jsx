@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../components/components.css';
 
 export function Navbar({ setSelectedItem }) {
@@ -45,6 +46,10 @@ export function Navbar({ setSelectedItem }) {
             >
               Tacos
             </a>
+         
+            <Link className='navegation__link' to='/Pedido'>
+            Pedido
+            </Link>
           </>
         )}
         <button

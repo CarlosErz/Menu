@@ -1,7 +1,7 @@
 import '../components/components.css'
 import PropTypes from 'prop-types';
 
-export function Card({ TitleCard, DescriptionCard, PriceCard, ImgCard,onClick }) {
+export function Card({ TitleCard, DescriptionCard, PriceCard, ImgCard,onClick,AdtoCard }) {
 
   return (
     <>
@@ -13,17 +13,18 @@ export function Card({ TitleCard, DescriptionCard, PriceCard, ImgCard,onClick })
                <img src={ImgCard} alt={TitleCard} className="Card_img" />
             </div>
           
-          <h1 className="Card_title">{TitleCard}</h1>
+          <h3 className="Card_title">{TitleCard}</h3>
           <p className="Card_description">{DescriptionCard}</p>
          
           
           </header>
            <div className="Card_flex">
-            <button className="Card_agg">
+            <button className="Card_agg" onClick={AdtoCard}>
               +
             </button>
             <p className="Card_price">
-            {PriceCard}
+            <span>$ </span> 
+             {PriceCard}
           </p>
           </div>
       </section> 
@@ -31,9 +32,10 @@ export function Card({ TitleCard, DescriptionCard, PriceCard, ImgCard,onClick })
   )
 }
 Card.propTypes = {
-  TitleCard: PropTypes.string.isRequired,
-  DescriptionCard: PropTypes.string.isRequired,
-  PriceCard: PropTypes.any.isRequired,
-  ImgCard: PropTypes.string.isRequired,
+  TitleCard: PropTypes.string,
+  DescriptionCard: PropTypes.string,
+  PriceCard: PropTypes.any,
+  ImgCard: PropTypes.string,
   onClick: PropTypes.func,
+  AdtoCard: PropTypes.func,
 };

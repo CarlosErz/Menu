@@ -1,10 +1,11 @@
 export const CardContent = [
   {
-    id: "1",
+    idcard: "1",
     TitleCard: 'Hot dog mixto 1', 
     DescriptionCard: 'Delicioso hot dog con queso y jamón', 
-    PriceCard: '$200.00', 
+    PriceCard: '200', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
+    quantity: 1,
     Section: 'Hotdogs',
     Ingredientes: [
       {
@@ -29,11 +30,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "2",
     TitleCard: 'Hotdog', 
     DescriptionCard: 'Otro hot dog delicioso con queso y jamón', 
-    PriceCard: '$220.00', 
+    PriceCard: '220', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hotdogs',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -60,11 +63,13 @@ export const CardContent = [
   },
 
   {
+    idcard: "3",
     TitleCard: 'Hotdog', 
     DescriptionCard: 'Otro hot dog delicioso con queso y jamón', 
-    PriceCard: '$220.00', 
+    PriceCard: '220', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hotdogs',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -88,11 +93,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "4",
     TitleCard: 'Hotdog', 
     DescriptionCard: 'Otro hot dog delicioso con queso y jamón', 
-    PriceCard: '$220.00', 
+    PriceCard: '220', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hotdogs',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -116,11 +123,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "5",
     TitleCard: 'Hotdog', 
     DescriptionCard: 'Otro hot dog delicioso con queso y jamón', 
-    PriceCard: '$220.00', 
+    PriceCard: '220', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hotdogs',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -144,11 +153,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "6",
     TitleCard: 'Hotdog', 
     DescriptionCard: 'Otro hot dog delicioso con queso y jamón', 
-    PriceCard: '$220.00', 
+    PriceCard: '220', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hotdogs',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -172,11 +183,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "7",
     TitleCard: 'Hamburguesa dobles', 
     DescriptionCard: 'Hamburguesa con ingredientes especiales', 
-    PriceCard: '$180.00', 
+    PriceCard: '180', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hamburguesas',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -200,11 +213,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "8",
     TitleCard: 'Hamburguesa', 
     DescriptionCard: 'Hamburguesa con ingredientes especiales', 
-    PriceCard: '$180.00', 
+    PriceCard: '180', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hamburguesas',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -228,11 +243,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "9",
     TitleCard: 'Hamburguesa', 
     DescriptionCard: 'Hamburguesa con ingredientes especiales', 
-    PriceCard: '$180.00', 
+    PriceCard: '180', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Hamburguesas',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -256,11 +273,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "10",
     TitleCard: 'Tacos', 
     DescriptionCard: 'Hamburguesa con ingredientes especiales', 
-    PriceCard: '$180.00', 
+    PriceCard: '180', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Tacos',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
@@ -284,11 +303,13 @@ export const CardContent = [
     ]
   },
   {
+    idcard: "11",
     TitleCard: 'Tacos', 
     DescriptionCard: 'Hamburguesa con ingredientes especiales', 
-    PriceCard: '$180.00', 
+    PriceCard: '180', 
     ImgCard: 'https://i.postimg.cc/vmYzwcNw/hamburguesa-Doritos.png',
     Section: 'Tacos',
+    quantity: 1,
     Ingredientes: [
       {
         id: "1",
