@@ -7,11 +7,9 @@
 }
 .title{
   text-align: center;
+  font-weight: 800;
 }
 @media screen and (max-width: 350px) {
-  .Card{
-    width:120px
-  }
   .product-container{
     grid-template-columns: 1fr;
     gap: 0;
@@ -29,6 +27,7 @@
     width: 50%;
     margin: 0 auto;
   }
+ 
   
 }
 

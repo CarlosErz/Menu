@@ -1,9 +1,6 @@
 
 import PropTypes from 'prop-types';
-
-
 export function Pedido({ allProducts, setAllProducts, total, setTotal }) {
-
 
   const updateCartAndLocalStorage = (updatedProducts) => {
     setAllProducts(updatedProducts);
@@ -21,6 +18,7 @@ export function Pedido({ allProducts, setAllProducts, total, setTotal }) {
       product => product.idcard !== card.idcard
     );
     updateCartAndLocalStorage(updatedProducts);
+
   };
 
   const reduceQuantity = (card) => {
@@ -45,13 +43,15 @@ export function Pedido({ allProducts, setAllProducts, total, setTotal }) {
     updateCartAndLocalStorage(updatedProducts);
   };
 
+
+
   return (
     <>
       <div className="order">
         <h1 className="title">ORDEN</h1>
         {allProducts.length ? (
           <>
-            <div className="order_content">
+            <div className="order_content" >
               {allProducts.map((card) => (
                 <div className="order_products" key={card.idcard}>
                   <img src={card.ImgCard} alt="" className="order_img" />
@@ -72,9 +72,12 @@ export function Pedido({ allProducts, setAllProducts, total, setTotal }) {
                 </div>
               ))}
             </div>
+
+
             <div className="order_total">
               <p>Total : $ <span>{total}</span></p>
             </div>
+
           </>
         ) : (
           <div className='order_empty_content'>

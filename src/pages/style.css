@@ -57,9 +57,7 @@
   
 }
 @media screen and (max-width: 350px) {
-  .Card {
-    width: 120px
-  }
+
 
   .product-container {
     grid-template-columns: 1fr;
@@ -67,6 +65,16 @@
   }
   .NotPague_title{
     font-size: 100px;
+  }
+  .NotPague_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Notpague_img .order_color>svg{
+    width: 80px;
+    height: 80px;
   }
 }
 
